@@ -1,0 +1,76 @@
+.CardLg {
+  padding: 1rem;
+  height: 35rem;
+  width: 28rem;
+  position: relative;
+  display: flex;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+}
+
+@media screen and (max-width: 1000px) {
+  .CardLg {
+    height: 26.5rem !important;
+    width: 21rem !important;
+  }
+
+  .Content h3 {
+    font-size: 2rem !important;
+  }
+
+  .Content p {
+    font-size: 1.15rem !important;
+  }
+}
+
+.Image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.Image img {
+  width: 100%;
+  object-fit: cover;
+  background: rgb(97, 39, 39);
+  transition: transform ease 0.5s;
+}
+
+.Content {
+  z-index: 20;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  width: 75%;
+}
+
+.Content * {
+  margin: 0.5rem auto;
+  width: 75%;
+}
+
+.Content h3 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.Content p {
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+main h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 3rem;
+}
