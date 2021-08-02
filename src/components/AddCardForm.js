@@ -11,7 +11,7 @@ const AddCardForm = (props) => {
   const [msgInput, setMsgInput] = useState(classes.normal);
   const [title, setTitle] = useState("");
   const [msg, setMsg] = useState("");
-  const imagePath = `/images/card${props.imageIndex}.jpg`;
+  const imagePath = props.imageIndex;
 
   const handleSubmit = (e) => {
     e.preventDefault();
