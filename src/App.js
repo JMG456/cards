@@ -18,6 +18,9 @@ function App() {
         <Route path="/" exact>
           <AllCards />
         </Route>
+        <Route path="/cards" exact>
+          <AllCards />
+        </Route>
         <Route path="/add-form">
         {imageIndex===0 ? <Redirect to={'/add-cover'}/> :
           <AddCard imageIndex={imageIndex}/>}
