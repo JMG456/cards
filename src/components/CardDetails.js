@@ -18,6 +18,7 @@ const CardDetails = () => {
 
   useEffect(() => {
     const abortCont = new AbortController();
+    const invalidErr=`Cannot read property 'imagePath' of null`;
     setCard({});
 
     fetch(
@@ -50,7 +51,12 @@ const CardDetails = () => {
       })
       .catch((err) => {
         if (!abortCont.signal.aborted) {
-          setError(err.message);
+          if(err.message===invalidErr){
+            setError('This card does not exist')
+          }
+          else{
+            setError(err.message);
+          }
           setCard(null);
         }
       });

@@ -10,7 +10,7 @@ import CardDetails from "./components/CardDetails";
 import NotFound from "./pages/NotFound";
 
 function App() {
-  const [imageIndex, setImageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(1);
 
   return (
     <Layout>
